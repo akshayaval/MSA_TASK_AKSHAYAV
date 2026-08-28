@@ -1,0 +1,165 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Fixed width caused horizontal overflow on narrow screens; width: 100% with box-sizing keeps it within the parent's bounds. */
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  background: #1f2933;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header-bar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.ticker {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.add-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-row button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.member-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.member-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.member-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.status-pill {
+  border: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.status-pill.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.blocked {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.remove-icon {
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.remove-icon:hover {
+  color: #ef4444;
+}
+
+/* ── Search ─────────────────────────────────────────────── */
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.search-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ── Filter buttons ─────────────────────────────────────── */
+.filter-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 5px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.filter-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Active filter matches the header dark tone for visual consistency */
+.filter-btn--active {
+  background: #1f2933;
+  color: white;
+  border-color: #1f2933;
+}
+
+/* ── Empty state ────────────────────────────────────────── */
+.no-results {
+  list-style: none;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 16px 0;
+}
